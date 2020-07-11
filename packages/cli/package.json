@@ -21,7 +21,7 @@
     "url": "git+https://github.com/blesstosam/lerna-demo.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "node index"
   },
   "bugs": {
     "url": "https://github.com/blesstosam/lerna-demo/issues"
@@ -29,5 +29,6 @@
   "dependencies": {
     "@wl-demo/cli-util": "^0.0.2",
     "chalk": "^4.1.0"
-  }
+  },
+  "gitHead": "8c3637c8a38efbf9d89e389e3bcc896e2d38afe3"
 }

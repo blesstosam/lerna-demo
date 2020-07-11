@@ -3,5 +3,5 @@
 module.exports = cliSharedUtils;
 
 function cliSharedUtils() {
-    // TODO
+    console.log('log in util!')
 }

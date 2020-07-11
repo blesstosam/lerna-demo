@@ -20,7 +20,7 @@
     "test": "node index"
   },
   "dependencies": {
-    "@mo-demo/cli-shared-utils": "../cli-shared-utils",
+    "@mo-demo/cli-shared-utils": "^0.0.2-alpha.2",
     "chalk": "^4.1.0"
   },
   "gitHead": "dc95529e6fdd7e70f1b1220c3dcbd7a7aaad4594"

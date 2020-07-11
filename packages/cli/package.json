@@ -1,6 +1,6 @@
 {
   "name": "@mo-demo/cli",
-  "version": "0.0.2-alpha.1",
+  "version": "0.0.2-alpha.2",
   "description": "> TODO: description",
   "author": "blesstosam <805902285@qq.com>",
   "homepage": "",
@@ -20,7 +20,7 @@
     "test": "node index"
   },
   "dependencies": {
-    "@mo-demo/cli-shared-utils": "^0.0.2-alpha.1",
+    "@mo-demo/cli-shared-utils": "^0.0.2-alpha.2",
     "chalk": "^4.1.0"
   },
   "gitHead": "d5eb423cfe303c1c199f812c95eeeff7e20e9837"

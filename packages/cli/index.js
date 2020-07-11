@@ -3,3 +3,4 @@ const cli = require('./lib/cli')
 
 util()
 cli()
+console.log('add log in cli...')

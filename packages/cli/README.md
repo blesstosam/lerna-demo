@@ -1,11 +1,11 @@
-# `@wl-demo/cli`
+# `@blesstowl/cli`
 
 > TODO: description
 
 ## Usage
 
 ```
-const cli = require('@wl-demo/cli');
+const cli = require('@blesstowl/cli');
 
 // TODO: DEMONSTRATE API
 ```

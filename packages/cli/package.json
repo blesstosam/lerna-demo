@@ -1,5 +1,5 @@
 {
-  "name": "@wl-demo/cli",
+  "name": "@blesstowl/cli",
   "version": "0.0.3",
   "description": "> TODO: description",
   "author": "blesstosam <805902285@qq.com>",
@@ -27,8 +27,8 @@
     "url": "https://github.com/blesstosam/lerna-demo/issues"
   },
   "dependencies": {
-    "@wl-demo/cli-util": "^0.0.3",
+    "@blesstowl/cli-util": "^0.0.3",
     "chalk": "^4.1.0"
   },
-  "gitHead": "8c3637c8a38efbf9d89e389e3bcc896e2d38afe3"
+  "gitHead": "2597c91c53ea58d0c6e9bcb1d575e99a5708b272"
 }

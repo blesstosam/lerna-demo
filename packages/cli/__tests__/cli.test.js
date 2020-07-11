@@ -2,6 +2,6 @@
 
 const cli = require('..');
 
-describe('@wl-demo/cli', () => {
+describe('@blesstowl/cli', () => {
     it('needs tests');
 });

@@ -21,7 +21,7 @@
     "url": "git+https://github.com/blesstosam/lerna-demo.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "node lib/cli-util"
   },
   "bugs": {
     "url": "https://github.com/blesstosam/lerna-demo/issues"

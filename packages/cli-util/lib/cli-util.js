@@ -3,5 +3,5 @@
 module.exports = cliUtil;
 
 function cliUtil() {
-    // TODO
+    console.log('log in util!')
 }

@@ -29,7 +29,8 @@
   "homepage": "https://github.com/blesstosam/lerna-demo#readme",
   "dependencies": {
     "chalk": "^4.1.0",
-    "semver": "^7.3.2"
+    "vue": "latest",
+    "react": "17.0.1"
   },
   "gitHead": "2597c91c53ea58d0c6e9bcb1d575e99a5708b272"
 }

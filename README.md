@@ -12,11 +12,11 @@
 但是我发现非公共依赖也会安装到根目录？
 
 ## Mode - Fixed or Independent
-- Fixed 发布新版本的时候，所有包会跟着根目录的版本走，要升一起升
-- Independent
+- Fixed 发布新版本的时候，所有包会跟着根目录的版本走，要升一起升 默认模式
+- Independent 发布新版本的时候 所有包的版本各自管理，不会保持一致 需要将 `lerna.json` 的 `version` 改为 `independent`
 
 ## Publish
-1. 当 fixed 模式的时候，当改动文件后，只有 commit 之后，才能 publish， 所以 lerna 应该是根据 git commit 来确定是否能发版本的。即当最新 commit 与最新版本的 commit 的不一致时，就可以发版本，并且会将根目录，所有包的 version 都加 1/0.0.1
+1. 当 fixed 模式的时候，当改动文件后，只有 commit 之后，才能 publish， 所以 lerna 应该是根据 git commit 来确定是否能发版本的。即当最新 commit 与最新版本的 commit 的不一致时，就可以发版本，并且会将根目录和所有包的 version 都加 1/0.0.1
 
 ## 参考链接
 

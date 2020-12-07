@@ -12,7 +12,7 @@
 但是我发现非公共依赖也会安装到根目录？
 
 ## Mode - Fixed or Independent
-- Fixed
+- Fixed 发布新版本的时候，所有包会跟着根目录的版本走，要升一起升
 - Independent
 
 ## Publish

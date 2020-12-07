@@ -1,6 +1,6 @@
 {
   "name": "@blesstowl/cli",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "> TODO: description",
   "author": "blesstosam <805902285@qq.com>",
   "homepage": "https://github.com/blesstosam/lerna-demo#readme",
@@ -27,7 +27,7 @@
     "url": "https://github.com/blesstosam/lerna-demo/issues"
   },
   "dependencies": {
-    "@blesstowl/cli-util": "^0.0.7",
+    "@blesstowl/cli-util": "^0.0.9",
     "chalk": "^4.1.0",
     "dotenv": "8.2.0",
     "vue": "2.6.11"

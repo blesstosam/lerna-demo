@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.9](https://github.com/blesstosam/lerna-demo/compare/v0.0.7...v0.0.9) (2020-12-07)
+
+**Note:** Version bump only for package @blesstowl/cli-util
+
+
+
+
+
 ## [0.0.7](https://github.com/blesstosam/lerna-demo/compare/v0.0.6...v0.0.7) (2020-12-07)
 
 **Note:** Version bump only for package @blesstowl/cli-util

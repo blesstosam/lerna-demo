@@ -1,7 +1,8 @@
 {
   "version": "0.0.9",
   "packages": [
-    "packages/*"
+    "packages/*",
+    "demo"
   ],
   "command": {
     "bootstrap": {

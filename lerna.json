@@ -6,7 +6,7 @@
   ],
   "command": {
     "bootstrap": {
-      "hoist": true
+      "hoist": false
     },
     "version": {
       "conventionalCommits": true

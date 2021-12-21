@@ -1,5 +1,3 @@
-# 知识点记录
-
 ## 解决的问题
 
 1. 自动解决 packages 之间的依赖关系（通过在主包的 node_modules 里增加对应依赖的软链接到源码文件夹，修改源码不用进行发布即可调试）
@@ -56,3 +54,5 @@ lerna add @blesstowl/cli-share --scope=@blesstowl/cli
 [Lerna Hoisting](https://github.com/lerna/lerna/blob/main/doc/hoist.md)
 
 [lerna 管理前端模块最佳实践](https://juejin.cn/post/6844903568751722509)
+
+[基于lerna和yarn workspace的monorepo工作流](https://zhuanlan.zhihu.com/p/71385053)

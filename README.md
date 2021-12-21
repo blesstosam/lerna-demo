@@ -6,7 +6,9 @@
 
 ## 不能解决的问题
 1. 如果依赖包需要编译，比如 ts 文件，那么调试的时候需要一直打包着生成包的入口文件，可不可以通过动态 alias 来解决呢？？？
-2. 不能单独发布某一个或某些包，如果使用 lerna publish，那么所有的包都会升版，并且发布。使用 Independent 模式只能保证各个包的版本好可以不保持一致！
+2. 不能单独发布某一个或某些包，如果使用 lerna publish，那么所有修改过代码并且commit了的包都会升版发布。使用 Independent 模式只能保证各个包的版本好可以不保持一致！   
+这是 github 相关 issue：
+[Question: How can I publish only one package?](https://github.com/lerna/lerna/issues/1691)
 
 ## `--hoist` 或在 `lerna.json` 里配置 `hoist` 为 `true`
 

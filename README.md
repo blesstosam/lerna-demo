@@ -20,6 +20,17 @@
 - Fixed 发布新版本的时候，所有包会跟着根目录的版本走，要升一起升 默认模式
 - Independent 发布新版本的时候 所有包的版本各自管理，不会保持一致 需要将 `lerna.json` 的 `version` 改为 `independent`
 
+## version
+1. Identifies packages that have been updated since the previous tagged release.
+2. Prompts for a new version.
+3. Modifies package metadata to reflect new release, running appropriate lifecycle scripts in root and per-package.
+4. Commits those changes and tags the commit.
+5. Pushes to the git remote.
+
+_默认会 push 到远程仓库，如果不想 push，可以使用 --no-push 参数_  
+_使用 --message 定制自动 commit 的 -m，也可以在 lerna.json 里配置_
+
+
 ## publish
 
 1. 当 fixed 模式的时候，当改动文件后，只有 commit 之后，才能 publish， 所以 lerna 应该是根据 git commit 来确定是否能发版本的。即当最新 commit 与最新版本的 commit 的不一致时，就可以发版本，并且会将根目录和所有包的 version 都加 1/0.0.1
@@ -45,6 +56,7 @@ lerna add @blesstowl/cli-share --scope=@blesstowl/cli
 ## 最佳实践
 
 - 采用 Independent 模式
+- lerna.json 添加 message 来自定义 version 命令生成的message记录
 - 根据 Git 提交信息，自动生成 changelog
 - eslint 规则检查
 - prettier 自动格式化代码

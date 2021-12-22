@@ -12,8 +12,8 @@
    [Question: How can I publish only one package?](https://github.com/lerna/lerna/issues/1691)
 
 ## 有一种场景未覆盖
-当有共享的代码，需要单独抽一个文件夹，但是我又不想把该共享代码单独发一个包。这里的目的是各个包能复用代码，而不是为了发包，但是直接在使用方使用 require 引入，文件目录会外溢，这样发包的时候有问题。一般来说，大家都是将这些共享代码发包，在使用方 require 发布的包，如 `@vue/shared`。  
-如果不想发包的话，可以做一些hack，在发包之前将共享代码copy到要发包的目录之下并修改 require 语句的路径。
+当有共享的代码，需要单独抽一个文件夹，但是我又不想把该共享代码单独发一个包。这里的目的是各个包能复用代码，而不是为了发包。如果直接在使用方使用 require 引入，文件目录会外溢，这样发包的时候不能讲外溢目录的文件发到包里，一般来说，大家都是将这些共享代码发包，在使用方 require 发布的包，如 `@vue/shared`。    
+如果不想发包的话，可以做一些 hack，在发包之前将共享代码 copy 到要发包的目录之下并修改 require 语句的路径。
 
 ```shell
 <root>/packages/
@@ -26,7 +26,7 @@
 
 ```javascript
 // a/index.js
-const shared = require('../shared/index')
+const shared = require('../shared/index') // 包目录外的文件不会被发布
 
 // 使用包的方式（目前的主流方式）
 const shared = require('@xx/shared')

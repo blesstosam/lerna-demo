@@ -53,6 +53,9 @@ lerna 的命令有很多，但是掌握几个常用的就行，即 `bootstrap, a
 
 ## add
 
+1. Add package to each applicable package. Applicable are packages that are not package and are in scope
+2. Bootstrap packages with changes to their manifest file (package.json)
+
 ```shell
 # 在本地将库安装到另一个库或包 不需要发布到 npm
 lerna add @blesstowl/cli-share --scope=@blesstowl/cli
@@ -60,9 +63,9 @@ lerna add @blesstowl/cli-share --scope=@blesstowl/cli
 
 `lerna add --scope` 有两个注意：
 
-1. 如果不使用 lerna 发布版本的话，@blesstowl/cli 里依赖的 @blesstowl/cli-share 版本要手动更新到 @blesstowl/cli-share 的实际版本，否则当 @blesstowl/cli 里的版本和 @blesstowl/cli-share 的实际版本不一致时会报错  
-   不使用 lerna publish => npm publish @blesstowl/cli-share => 升级 @blesstowl/cli 的依赖版本 => lerna add @blesstowl/cli-share --scope=@blesstowl/cli
-2. 只要上述所说的版本相同，@blesstowl/cli-share 在本地更改之后，重新运行 `lerna add --scope` node_modules 里的代码也会更改，即 add 命令就是直接把整个包复制到指定包的 node_modules 里
+_1. 如果不使用 lerna 发布版本的话，@blesstowl/cli 里依赖的 @blesstowl/cli-share 版本要手动更新到 @blesstowl/cli-share 的实际版本，否则当 @blesstowl/cli 里的版本和 @blesstowl/cli-share 的实际版本不一致时会报错_  
+_不使用 lerna publish => npm publish @blesstowl/cli-share => 升级 @blesstowl/cli 的依赖版本 => lerna add @blesstowl/cli-share --scope=@blesstowl/cli_  
+_2. 只要上述所说的版本相同，@blesstowl/cli-share 在本地更改之后，重新运行 `lerna add --scope` node_modules 里的代码也会更改，即 add 命令就是直接把整个包复制到指定包的 node_modules 里_
 
 ## version
 
@@ -72,13 +75,14 @@ lerna add @blesstowl/cli-share --scope=@blesstowl/cli
 4. Commits those changes and tags the commit.
 5. Pushes to the git remote.
 
-_默认会 push 到远程仓库，如果不想 push，可以使用 --no-push 参数_  
-_使用 --message 定制自动 commit 的 -m，也可以在 lerna.json 里配置_
+_1. 默认会 push 到远程仓库，如果不想 push，可以使用 --no-push 参数_  
+_2. 使用 --message 定制自动 commit 的 -m，也可以在 lerna.json 里配置_
+_3. version 命令会自动生成 changelog.md，但是有时会发现A仓库包含B仓库的commit记录，往往不太靠谱_
 
 ## publish
 
 1. Publish packages updated since the last release (calling [lerna version](https://github.com/lerna/lerna/tree/main/commands/version#readme) behind the scenes).
-    - This is the legacy behavior of lerna 2.x
+   - This is the legacy behavior of lerna 2.x
 2. Publish packages tagged in the current commit (`from-git`).
 3. Publish packages in the latest commit where the version is not present in the registry (`from-package`).
 4. Publish an unversioned "canary" release of packages (and their dependents) updated in the previous commit.
@@ -89,7 +93,7 @@ _当 fixed 模式的时候，当改动文件后，只有 commit 之后，才能 
 
 - 采用 Independent 模式
 - lerna.json 添加 message 来自定义 version 命令生成的 message 记录
-- 根据 Git 提交信息，自动生成 changelog
+- 使用 lerna version 来自动修改版本号和生成 changelog.md，不要使用 lerna publish，而是手动发包
 - eslint 规则检查
 - prettier 自动格式化代码
 - 提交代码，代码检查 hook

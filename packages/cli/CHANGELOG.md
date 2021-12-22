@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/blesstosam/lerna-demo/compare/@blesstowl/cli@0.1.1...@blesstowl/cli@0.2.0) (2021-12-22)
+
+
+### Features
+
+* add shared ([d70c47b](https://github.com/blesstosam/lerna-demo/commit/d70c47b9e65d8e9b39fdd4aea7fc392312b2c4df))
+* add shared ([4f0a842](https://github.com/blesstosam/lerna-demo/commit/4f0a842db8ca991f986c15e0263dfa39a5732fb7))
+
+
+
+
+
 ## [0.1.1](https://github.com/blesstosam/lerna-demo/compare/@blesstowl/cli@0.1.0...@blesstowl/cli@0.1.1) (2021-12-20)
 
 

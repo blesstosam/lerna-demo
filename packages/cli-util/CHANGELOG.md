@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.11](https://github.com/blesstosam/lerna-demo/compare/@blesstowl/cli-util@0.0.10...@blesstowl/cli-util@0.0.11) (2021-12-22)
+
+
+### Bug Fixes
+
+* **cli-util:** add test ([f09293c](https://github.com/blesstosam/lerna-demo/commit/f09293c2474f068cbeafc8aa506a70f4bc8a2ea4))
+
+
+
+
+
 ## 0.0.10 (2021-12-20)
 
 

@@ -11,6 +11,27 @@
    这是 github 相关 issue：
    [Question: How can I publish only one package?](https://github.com/lerna/lerna/issues/1691)
 
+## 有一种场景未覆盖
+当有共享的代码，需要单独抽一个文件夹，但是我又不想把该共享代码单独发一个包。这里的目的是各个包能复用代码，而不是为了发包，但是直接在使用方使用 require 引入，文件目录会外溢，这样发包的时候有问题。一般来说，大家都是将这些共享代码发包，在使用方 require 发布的包，如 `@vue/shared`。  
+如果不想发包的话，可以做一些hack，在发包之前将共享代码copy到要发包的目录之下并修改 require 语句的路径。
+
+```shell
+<root>/packages/
+  a/
+  b/
+  shared/index.js
+```
+
+如上面所示的场景，a 包和 b 包都使用 shared/index.js，但是想以源码引入，而非引入 npm 包
+
+```javascript
+// a/index.js
+const shared = require('../shared/index')
+
+// 使用包的方式（目前的主流方式）
+const shared = require('@xx/shared')
+```
+
 # lerna.json 推荐配置（这里使用的 npm）
 
 ```json

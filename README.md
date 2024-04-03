@@ -16,7 +16,8 @@
 如果不想发包的话，可以做一些 hack，在发包之前将共享代码 copy 到要发包的目录之下并修改 require 语句的路径。
 
 ```shell
-<root>/packages/
+<root>
+/packages/
   a/
   b/
   shared/index.js
